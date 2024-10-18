@@ -15,7 +15,16 @@ module Program =
         [
             mapGet "/hello/{name?}"
                 (fun route ->
-                    { Message = route?name.AsString("world") })
+                    let name = route?name.AsString("world")
+                    let age = route?age.AsIntOption()
+
+                    let message =
+                        match age with
+                        | Some a when a > 0 -> $"Hello {name}, you are {a} years old!"
+                        | Some _ -> $"Hello {name}, you are ageless!"
+                        | _ -> $"Hello {name}!"
+
+                    { Message = message })
                 Response.ofJson
                 |> OpenApi.name "Greeting"
                 |> OpenApi.summary "A friendly greeter"
