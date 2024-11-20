@@ -236,7 +236,6 @@ let endpoints =
     ]
 ```
 
-
 ## Find a bug?
 
 There's an [issue](https://github.com/pimbrouwers/Falco.OpenApi/issues) for that.
