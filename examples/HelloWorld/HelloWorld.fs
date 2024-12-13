@@ -33,8 +33,8 @@ module Program =
             .UseSwaggerUI()
         |> ignore
 
-        wapp.UseFalco(endpoints) // <-- prepare endpoints for routing
-        |> ignore
+        wapp.UseRouting()
+            .UseFalco(endpoints)
+            .Run()
 
-        wapp.Run()
         0

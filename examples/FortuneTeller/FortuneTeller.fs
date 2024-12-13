@@ -26,9 +26,7 @@ module Program =
             mapPost "/fortune"
                 (fun r -> r?age.AsIntOption())
                 (fun ageOpt ->
-                    Request.mapJson<FortuneInput> (Option.defaultValue { Name = "Joe" }
-                    >> Fortune.Create ageOpt
-                    >> Response.ofJson))
+                    Request.mapJson<FortuneInput> (Fortune.Create ageOpt >> Response.ofJson))
                 |> OpenApi.name "Fortune"
                 |> OpenApi.summary "A mystic fortune teller"
                 |> OpenApi.description "Get a glimpse into your future, if you dare."
@@ -54,8 +52,8 @@ module Program =
             .UseSwaggerUI()
         |> ignore
 
-        wapp.UseFalco(endpoints)
-        |> ignore
+        wapp.UseRouting()
+            .UseFalco(endpoints)
+            .Run()
 
-        wapp.Run()
         0

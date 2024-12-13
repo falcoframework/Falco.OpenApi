@@ -53,8 +53,8 @@ module Program =
             .UseSwaggerUI()
         |> ignore
 
-        wapp.UseFalco(endpoints)
-        |> ignore
+        wapp.UseRouting()
+            .UseFalco(endpoints)
+            .Run()
 
-        wapp.Run()
         0

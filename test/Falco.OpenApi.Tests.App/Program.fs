@@ -54,9 +54,8 @@ wapp.UseHttpsRedirection()
     .UseSwaggerUI()
 |> ignore
 
-wapp.UseFalco(endpoints)
-|> ignore
-
-wapp.Run()
+wapp.UseRouting()
+    .UseFalco(endpoints)
+    .Run()
 
 type Program() = class end
