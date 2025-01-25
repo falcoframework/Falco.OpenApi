@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Falco.OpenApi</AssemblyName>
-    <Version>1.0.0-beta1</Version>
+    <Version>1.0.0-rc1</Version>
 
     <!-- General info -->
     <Description>OpenAPI integration that provides a set of utilities for generating OpenAPI documentation from Falco routes.</Description>
@@ -35,7 +35,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Falco" Version="5.0.0-beta5" />
+    <PackageReference Include="Falco" Version="5.0.0-rc2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.*" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.*" PrivateAssets="All" />
   </ItemGroup>
