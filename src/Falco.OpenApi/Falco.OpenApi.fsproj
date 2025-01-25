@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Falco.OpenApi</AssemblyName>
-    <Version>1.0.0-rc1</Version>
+    <Version>1.0.0-rc2</Version>
 
     <!-- General info -->
     <Description>OpenAPI integration that provides a set of utilities for generating OpenAPI documentation from Falco routes.</Description>
