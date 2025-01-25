@@ -91,7 +91,7 @@ Which produces the following OpenAPI documentation:
 
 ```json
 {
-  "openapi": "3.0.1",
+  "openapi": "x.x.x",
   "info": {
     "title": "HelloWorld",
     "version": "1.0"
@@ -243,4 +243,4 @@ There's an [issue](https://github.com/pimbrouwers/Falco.OpenApi/issues) for that
 
 ## License
 
-Built with ♥ by [Pim Brouwers](https://github.com/pimbrouwers) in Toronto, ON. Licensed under [Apache License 2.0](https://github.com/pimbrouwers/Falco.OpenApi/blob/master/LICENSE).
+Licensed under [Apache License 2.0](https://github.com/pimbrouwers/Falco.OpenApi/blob/master/LICENSE).
