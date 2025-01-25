@@ -18,7 +18,7 @@ let endpoints =
     ]
 ```
 
-[Falco.OpenAPI](https://github.com/pimbrouwers/Falco.OpenAPI) is a library for generating OpenAPI documentation for Falco applications. It provides a set of combinators for annotating Falco routes with OpenAPI metadata, which can be used to generate OpenAPI documentation.
+[Falco.OpenAPI](https://github.com/pimbrouwers/Falco.OpenAPI) is a library for generating OpenAPI documentation for [Falco](https://github.com/pimbrouwers/Falco) applications. It provides a set of combinators for annotating Falco routes with OpenAPI metadata, which can be used to generate OpenAPI documentation.
 
 ## Key Features
 
