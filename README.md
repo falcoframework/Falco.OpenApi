@@ -1,7 +1,7 @@
 # Falco.OpenAPI
 
 [![NuGet Version](https://img.shields.io/nuget/v/Falco.OpenApi.svg)](https://www.nuget.org/packages/Falco.OpenApi)
-[![build](https://github.com/pimbrouwers/Falco.OpenApi/actions/workflows/build.yml/badge.svg)](https://github.com/pimbrouwers/Falco.OpenApi/actions/workflows/build.yml)
+[![build](https://github.com/FalcoFramework/Falco.OpenApi/actions/workflows/build.yml/badge.svg)](https://github.com/FalcoFramework/Falco.OpenApi/actions/workflows/build.yml)
 
 ```fsharp
 open Falco
@@ -18,7 +18,7 @@ let endpoints =
     ]
 ```
 
-[Falco.OpenAPI](https://github.com/pimbrouwers/Falco.OpenAPI) is a library for generating OpenAPI documentation for [Falco](https://github.com/pimbrouwers/Falco) applications. It provides a set of combinators for annotating Falco routes with OpenAPI metadata, which can be used to generate OpenAPI documentation.
+[Falco.OpenAPI](https://github.com/FalcoFramework/Falco.OpenAPI) is a library for generating OpenAPI documentation for [Falco](https://github.com/FalcoFramework/Falco) applications. It provides a set of combinators for annotating Falco routes with OpenAPI metadata, which can be used to generate OpenAPI documentation.
 
 ## Key Features
 
@@ -36,7 +36,7 @@ let endpoints =
 
 ## Getting Started
 
-This guide assumes you have a [Falco](https://github.com/pimbrouwers/Falco) project setup. If you don't, you can create a new Falco project using the following command:
+This guide assumes you have a [Falco](https://github.com/FalcoFramework/Falco) project setup. If you don't, you can create a new Falco project using the following command:
 
 ```shell
 > dotnet new web -lang F# -o HelloWorld
@@ -239,8 +239,8 @@ let endpoints =
 
 ## Find a bug?
 
-There's an [issue](https://github.com/pimbrouwers/Falco.OpenApi/issues) for that.
+There's an [issue](https://github.com/FalcoFramework/Falco.OpenApi/issues) for that.
 
 ## License
 
-Licensed under [Apache License 2.0](https://github.com/pimbrouwers/Falco.OpenApi/blob/master/LICENSE).
+Licensed under [Apache License 2.0](https://github.com/FalcoFramework/Falco.OpenApi/blob/master/LICENSE).
