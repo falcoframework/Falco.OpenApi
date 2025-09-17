@@ -5,7 +5,7 @@
 
     <!-- General info -->
     <Description>OpenAPI integration that provides a set of utilities for generating OpenAPI documentation from Falco routes.</Description>
-    <Copyright>Copyright 2024 Pim Brouwers</Copyright>
+    <Copyright>Copyright 2025 Pim Brouwers</Copyright>
     <Authors>Pim Brouwers and contributors</Authors>
     <NeutralLanguage>en-CA</NeutralLanguage>
 
@@ -20,13 +20,13 @@
     <!-- NuGet config -->
     <PackageId>Falco.OpenApi</PackageId>
     <PackageTags>openapi;open-api;fsharp;functional;falco;falco-sharp;</PackageTags>
-    <PackageProjectUrl>https://github.com/FalcoFramework/Falco</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/FalcoFramework/Falco.OpenApi</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/FalcoFramework/Falco</RepositoryUrl>
+    <RepositoryUrl>https://github.com/FalcoFramework/Falco.OpenApi</RepositoryUrl>
 
     <!-- SourceLink settings -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -35,9 +35,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Falco" Version="5.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.*" />
+    <PackageReference Include="Falco" Version="5.*" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.*" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.*" />
   </ItemGroup>
 
   <ItemGroup>
