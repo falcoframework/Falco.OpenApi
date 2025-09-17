@@ -136,6 +136,16 @@ module OpenApi =
 
         { endpoint with Configure = endpoint.Configure >> configure }
 
+    /// Specifies a header parameter for the endpoint. This corresponds to the
+    /// HeaderParameter in the OpenAPI specification.
+    let header headerParams endpoint =
+        let configure (x : EndpointBuilder) =
+            for param in headerParams do
+                x.Metadata.Add(createParameterMetadata HeaderParameter param)
+            x
+
+        { endpoint with Configure = endpoint.Configure >> configure }
+
 [<AutoOpen>]
 module FalcoOpenApiExtensions =
     type IServiceCollection with

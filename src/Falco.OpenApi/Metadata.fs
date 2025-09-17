@@ -35,6 +35,7 @@ type internal FalcoEndpointTagsMetadata(tags : string list) =
 type FalcoEndpointParameterMetadataSource =
     | PathParameter
     | QueryParameter
+    | HeaderParameter
 
 [<Sealed>]
 type internal FalcoEndpointParameterMetadata(

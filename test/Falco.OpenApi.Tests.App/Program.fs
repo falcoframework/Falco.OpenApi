@@ -36,6 +36,9 @@ let endpoints =
                     { Type = typeof<string>; Name = "Name"; Required = false } ]
                 |> OpenApi.query [
                     { Type = typeof<int>; Name = "Age"; Required = false } ]
+                |> OpenApi.header [
+                    { Type = typeof<string>; Name = "X-Request-ID"; Required = false }
+                ]
                 |> OpenApi.acceptsType typeof<string>
                 |> OpenApi.returnType typeof<Greeting>
     ]

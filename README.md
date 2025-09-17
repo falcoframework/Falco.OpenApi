@@ -203,7 +203,6 @@ let endpoints =
 
 ### Query Parameters
 
-
 ```fsharp
 open Falco
 open Falco.OpenApi
@@ -218,6 +217,25 @@ let endpoints =
             Response.ofPlainText
             |> OpenApi.route [
                 { Type = typeof<int>; Name = "age"; Required = false } ]
+    ]
+```
+
+### Header Parameters
+
+```fsharp
+open Falco
+open Falco.OpenApi
+open Falco.Routing
+
+let endpoints =
+    [
+        get "/"
+            (fun ctx ->
+                let headers = Request.getHeaders ctx
+                let versionId = headers.GetString "X-Version-ID"
+                $"Hello, you are using version {versionId}")
+            |> OpenApi.header [
+                { Type = typeof<string>; Name = "X-Version-ID"; Required = true } ]
     ]
 ```
 

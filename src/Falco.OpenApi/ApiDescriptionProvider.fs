@@ -59,6 +59,7 @@ type internal FalcoApiDescriptionProvider (dataSource : FalcoEndpointDataSource)
             match param.Source with
             | PathParameter -> BindingSource.Path
             | QueryParameter -> BindingSource.Query
+            | HeaderParameter -> BindingSource.Header
 
         ApiParameterDescription(
             Source = source,
