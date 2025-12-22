@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Falco.OpenApi</AssemblyName>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
 
     <!-- General info -->
     <Description>OpenAPI integration that provides a set of utilities for generating OpenAPI documentation from Falco routes.</Description>
@@ -10,7 +10,7 @@
     <NeutralLanguage>en-CA</NeutralLanguage>
 
     <!-- Build config -->
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <DebugType>embedded</DebugType>
     <OutputType>Library</OutputType>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
